@@ -54,7 +54,7 @@ export default function AdminDashboardLayout({
           <SidebarFooter>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton href="/admin/login" asChild tooltip={{ children: "Logout" }}>
+                <SidebarMenuButton asChild tooltip={{ children: "Logout" }}>
                   <Link href="/admin/login">
                     <LogOut />
                     <span>Logout</span>

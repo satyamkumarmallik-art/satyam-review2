@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -64,7 +63,6 @@ export default function DashboardLayout({
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  href="/dashboard"
                   asChild
                   isActive
                   tooltip={{ children: "Dashboard" }}
@@ -76,7 +74,7 @@ export default function DashboardLayout({
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton href="/dashboard/profile" asChild tooltip={{ children: "Profile" }}>
+                <SidebarMenuButton asChild tooltip={{ children: "Profile" }}>
                   <Link href="/dashboard/profile">
                     <User />
                     <span>Profile</span>
