@@ -1,0 +1,27 @@
+
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "registrationNumbers": {
+      ".read": true,
+      ".write": "auth != null",
+      "$regNo": {
+        ".validate": "newData.hasChildren(['uid'])"
+      }
+    },
+    "updates": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "reviews": {
+      ".indexOn": ["subjectId", "studentId"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
